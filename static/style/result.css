@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(https://media.discordapp.net/attachments/798212050496126976/920157394489733160/leaves-main.png?width=945&height=672);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    
+    background-position: right;
+    background-attachment: fixed;
+}
+.content{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    background-color: white;
+}
