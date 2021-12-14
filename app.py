@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from calculate import calc
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
@@ -20,11 +21,18 @@ def result():
         animals = request.form.get('animals', '0')
         rotation = request.form.get('crop_rotation', '0')
         tractors = request.form.get('tractors', '0')
-        fertilizer =  request.form.get('fertilizers', '0')
+        fertilizer =  request.form.get('fertilizers', 'a')
+        trac_func = request.form.get('tractors_function', 'a')
         age = request.form.get('age', '0')
+    
+    emissions = calc(int(area), int(animals), int(tractors), trac_func, fertilizer, age, rotation)
     # default_value = '0'
     # data = request.form.get('land', default_value)
-    return render_template('result.html', area=area,animals=animals,rotation=rotation,tractors=tractors,fertilizer=fertilizer,age=age)
+    if emissions>=5393.51:
+        st = f'{round((emissions/5393)*100 - 1,2)}% more than average'
+    else:
+        st = f'{round((5393-emissions)/5393 *100, 2)}% less than average'
+    return render_template('result.html', emissions=round(emissions, 2), statement= st)
 
 if __name__ == "__main__":
     app.run(debug=True)
