@@ -1,17 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-html{
+body{
     font-family: 'Poppins', sans-serif;
     background-image: url(https://media.discordapp.net/attachments/798212050496126976/920157394489733160/leaves-main.png?width=945&height=672);
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     
     background-position: right;
     background-attachment: fixed;
+
+    
+}
+
+hr {
+    width: 80%;
+    margin: 0 auto;
 }
 .content{
-    position: absolute;
-    height: 80%;
+    
+ 
     width: 80%;
-    background-color: white;
+    background-color: #F5FFF8;
+    border-radius: 20px;
+    margin-top: 3rem;
+    margin: 25vh auto;
+    padding: 2rem 1.5rem;
+    /* z-index: 1;s */
 }
+
+
+
+
+
+.hehe {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.boxie {
+    text-align: right;
+}
+
