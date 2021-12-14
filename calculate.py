@@ -1,4 +1,12 @@
 
+
+
+def calc(area, animals, tractors, tractor_type, fert_type, years, rotation):
+    
+    emissions = 0
+
+    return emissions
+
 print("enter area of land in metres")
 area = int(input())
 

@@ -18,10 +18,10 @@
 
         <h1>Carbon <span>Footprint</span> Quiz</h1>
     <br><br>
-        <div class="form">
-            <form method="post">
+        <div class="form" >
+            <form method="post" action="/result" method="POST">
                 <p class="question">1. How much land do you use for agriculture? (in metre sq) </p>
-                <input type="number" class="one" />
+                <input type="number" class="one" name="land" />
                 <br><br><br>
                 <p class="question">2. Do you follow crop rotation (growing more than 1 kind of crop on the same land) </p>
                 <input type="radio" id="html" name="crop_rotation" value="a">
@@ -34,18 +34,12 @@
                 <label for="d">No, I don't</label><br>
 
                 <br><br><br>
-                <p class="question">3. Do you use tractors for your agricultural processes?</p>
-                <input type="radio" id="html" name="tractors" value="a">
-                <label for="a">No</label><br>
-                <input type="radio" id="html" name="tractors" value="b">
-                <label for="b">Yes</label><br>
-                <br>
-                <p>If yes,</p>
+                
             
-                <p class="question-sub">3a. How many of them? </p>
-                <input type="number" class="threea" />
+                <p class="question-sub">3. How many tractors do you use in farming? </p>
+                <input type="number" class="threea" name="tractors"/>
                 <br><br>
-                <p class="question-sub">3b. What do they function on?</p>
+                <p class="question-sub">3a. What do they function on?</p>
                 <input type="radio" id="html" name="tractors_function" value="a">
                 <label for="a">Petrol</label><br>
                 <input type="radio" id="html" name="tractors_function" value="b">
@@ -54,30 +48,26 @@
                 <br><br><br>
 
                 <p class="question">4. How many dairy animals do you own? (cows, buffaloes, sheeps, etc)</p>
-                <input type="number" class="four" />
+                <input type="number" class="four" name="animals"/>
 
 
                 <br><br><br>
-                <p class="question">5. Do you use fertilizers on your crop?</p>
-                <input type="radio" id="html" name="tractors" value="a">
-                <label for="a">No</label><br>
-                <input type="radio" id="html" name="tractors" value="b">
-                <label for="b">Yes</label><br>
-                <br>
-                <p>If yes,</p>
-                <p class="question-sub">5a. What kind of fetilizer?</p>
-                <input type="radio" id="html" name="fertilizer" value="a">
+                <p class="question-sub">5. What kind of fertilizers do you use?</p>
+                <input type="radio" id="html" name="fertilizers" value="a">
                 <label for="a">Organic</label><br>
-                <input type="radio" id="html" name="fertilizer" value="b">
+                <input type="radio" id="html" name="fertilizers" value="b">
                 <label for="b">Synthetic</label><br>
-                <input type="radio" id="html" name="fertilizer" value="c">
-                <label for="c">Mixed</label><br>
+                <input type="radio" id="html" name="fertilizers" value="c">
+                <label for="c">I don't use any of them</label><br>
                <br><br><br>
                <p class="question">6. How long is farming being carried out on the land you're using (in years)</p>
-                <input type="number" class="six" />
-
+                <input type="number" class="six" name="age" />
+                <br><br>
+                <input class="btn" type="submit" name="submit" value="Submit">
             </form>
+            <br><br>
         </div>
     </div>
+    <!-- <button onclick="window.location.href='/result'">get results</button> -->
 </body>
 </html>
